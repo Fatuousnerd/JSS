@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tackio || Logout</title>
+	<title>Logout</title>
 	<style>
 		body {
 			background-color: #f1f1f1;
@@ -49,5 +49,6 @@
 	<h1>Logged Out Successfully</h1>
 	<p>You have been logged out of your account.</p>
 	<button onclick="location.href='login.html'">Log In Again</button>
+	<button onclick="location.href='index.html'">Back To HomePage</button>
 </body>
 </html>
