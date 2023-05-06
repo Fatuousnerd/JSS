@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page - Add School</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container form label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .container form input {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container form button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .container form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Add School</h2>
+    <form action="admin.php" method="post">
+      <label for="stationName">School Name</label>
+      <input type="text" id="stationName" name="stationName" required>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="description">More Relevant Information</label>
+      <textarea id="description" name="description" rows="4" oninput="countCharacters()" required></textarea>
+      <div class="char-count" id="charCount">Character count: 0/255 Max</div>
+      <button type="submit">Add School</button>
+    </form>
+  </div>
+
+  <script>
+    function countCharacters() {
+      var text = document.getElementById("description").value;
+      var charCount = text.length;
+
+      document.getElementById("charCount").textContent = charCount + "/255 Max";
+    }
+  </script>
+</body>
+</html>
