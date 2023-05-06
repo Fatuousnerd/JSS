@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Junior Secondary Teachers Placement</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="checker.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<div class='dropdown'>
+						<button>About</button>
+						<div class='dropdown-content'>
+							<a href='profile.html'>Profile</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div class='dropdown'>
+						<button>Contact Us</button>
+						<div class='dropdown-content'>
+							<a href='market.html'>Email</a>
+							<a href='market.html'>Phone</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<div class='dropdown'>
+						<button>Settings</button>
+						<div class='dropdown-content'>
+							<a href='#' onclick="theme()">Theme</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item lg" id="lg">
+					<a class="nav-link" href="login.html">Login</a>
+				</li>
+			</ul>
+		</div>
+    </nav>
+
+  <h1>Junior Secondary Teachers Placement</h1>
+  
+  <form id="workerForm">
+    <div class="form-group">
+      <label for="workerName">Teacher's Name:</label>
+      <input type="text" id="workerName" name="workerName" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="workerID">Teacher's TSC No.:</label>
+      <input type="text" id="workerID" name="workerID" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="workerResidence">Teacher's Residence Location:</label>
+      <input type="text" id="workerResidence" name="workerResidence" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="workerLevel">Teacher's Level:</label>
+      <select id="workerLevel" name="workerLevel" required>
+        <option value="">Select Level</option>
+        <option value="Junior">Principal</option>
+        <option value="Mid-level">Teacher</option>
+        <option value="Senior">Teaching Practice</option>
+      </select>
+    </div>
+    
+    <button type="submit">Place Teacher</button>
+  </form>
+
+  <style>
+    .dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown-content a {
+display: block;
+padding: 10px;
+text-decoration: none;
+color: #333;
+}
+
+.dropdown-content a:hover {
+background-color: #f2f2f2;
+}
+</style>
+
+  <script src="script.js"></script>
+</body>
+</html>
